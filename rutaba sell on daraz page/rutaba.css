@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+ 
+*{
+margin: 3px;
+padding: 3px;
+box-sizing: border-box;
+text-decoration: none;
+font-size: 14px;
+  line-height: 13px;}
+
+
+.navline1{
+background-color: rgba(158, 158, 158, 0.2); 
+font-family: 'Roboto', sans-serif;
+font-weight: 600;
+font-size: 12px;
+height: 25px;
+
+/* main yahan flex use kr rhi hun taky content vertically and horizontally center allign hojaye plus responsiveness asani se implement ho payegi */
+
+display: flex;
+justify-content: center;
+align-items: center;}
+
+/* yahan elements k bech main distance deny liye margins diye */
+.nav-elements{
+margin-right: 20px;
+margin-left: 20px;   
+}
+
+/* save more on app waly ko left side pe margin diya taky thora aagy khisk jaye */
+
+#save{
+color: orangered;
+margin-left: 220px;  
+}
+
+
+/* yahan mai is page k saary anchor tag ki css kr rhi */
+
+a{
+/* yahan mainy anchor tag ke nechy ki line hatayi ha */
+text-decoration: none;
+/* ab anchor tag k font colors change kr rhi */
+color: black;
+
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/* ab main navbar ki dusri line k liye coding kr rhi */
+.navline2 {
+margin-left: 200px;
+margin-right: 200px;
+height: 70px;
+
+/* flex isliye gayi taky sab elements line wise ajayen plus center allign hojayen */
+display: flex;
+justify-content: center;     /*center allign for horizontal */
+align-items: center;         /*center allign for vertical*/
+
+}
+
+
+/* line 2 ma jo pehla logo ha uksi css */
+.nav-logo-img {
+width: 135px;
+height: 41px;
+background-color: white;
+margin-right: 75px;
+}
+
+
+/* line 2 main search bar ki css */
+#nav-input {
+width: 688px;
+height: 45px;
+background-color: #f5f5f5;
+padding: 13px 9px;
+
+
+/* border removal of search bar */
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: hidden;
+
+border-radius: 2px;
+}
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan just border remove kiya */
+.nav-search-icon{
+width: 40px;                       /*yahan W and H jo di ha wohi nechy bhi di taky image button se overflolw na ho*/
+height: 45px;
+
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: hidden;   
+}
+
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan button pe lagayi hui image ka size chota kiya remove kiya */
+.nav-search-icon-img{
+width: 40px;
+height: 45px;
+}
+
+
+/* cart ka logo lagany k liye yahan css di */
+.nav-cart-img{
+width: 40px;
+height: 40px;
+margin-left: 35px;
+}
+
+
+/* last element of line 2  */
+.nav-download-img{
+width: 188px;
+height: 45px;
+
+margin-left: 35px;
+}
+Footer{
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Co
+}
+
+.container-icon{
+  display-flex;
+}
+.container-seller{
+display: flex;
+display: inline;
+}
+.container-sellersupport{
+margin-right: 0px;
+display: flex;/
+display: inline;
+}
+.container-question{
+
+
+text-align: center;
+position: relative;}

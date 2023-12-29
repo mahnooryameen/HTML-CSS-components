@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Daraz</title>
+    <!-- this is fevicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,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">
+</head>
+
+<body>
+    <!-- yeh hamara nav bar ha, ismain 2 lines ayengi pehli mai links dusri mai logo searchbar wagera -->
+    <nav class="navbar">
+
+        <!-- ------------------har line k liye many ek ek div banaya hai pehla div = links--------------------------------- -->
+
+        <div class="navline1">
+            <span class="nav-elements" id="save">SAVE MORE ON APP</span>
+            <a href="" class="nav-elements" target="_blank">DARAZ AFFILIATE PROGRAM</a>
+            <a href="" class="nav-elements" target="_blank">SELL ON DARAZ</a>
+            <span class="nav-elements">CUSTOMER CARE</span>
+            <SPAN class="nav-elements">TRACK MY ORDER</SPAN>
+            <a href="" class="nav-elements" target="_blank">LOGIN</a>
+            <a href="" class="nav-elements" target="_blank">SIGNUP</a>
+            <SPAN class="nav-elements">زبان تبدیل کریں</SPAN>
+        </div>
+
+        <!----------------------------now i am making second line of nav bar---------------------------------------------->
+
+        <div class="navline2">
+            <a href="" target="_blank"><img class="nav-logo-img"
+                    src="https://icms-image.slatic.net/images/ims-web/3ae67ef5-e5f6-42c3-9a40-993ef9a7bfae.png"
+                    alt=""></a>
+            <input type="text" name="" id="nav-input" placeholder="Search in Daraz">
+            <button type="button" class="nav-search-icon"><img class="nav-search-icon-img"
+                    src="data:image/png;base64,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"
+                    alt=""></button>
+            <a href="" target="_blank"><img class="nav-cart-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqAqqAhy9txvQP34k1dslku0ZsYt-bF0IHkg&usqp=CAU"
+                    alt=""></a>
+            <a href="" target="_blank"><img class="nav-download-img"
+                    src="https://icms-image.slatic.net/images/ims-web/7a379e2e-4b65-4617-9188-94e0c768cd9d.png"
+                    alt=""></a>
+        </div>
+    </nav>
+
+    <!-- --------------------------BANNER-category--------------------------------------------------------------------------------- -->
+
+    <header>
+        <div class="main-banner">
+
+
+            <!-- main banner k div mai ek div ha categories k liye, ak anchor tag ha jismain mainy bg slide images lagain hain -->
+            <div class="banner-category">
+                <ul>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Groceries & Pets</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Health & Beauty</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Men's Fashion</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Women's fashion</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Mother & Baby</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Home & lifestyle</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Electronic Devices</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Electronic Accessories</a>
+                    </li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">TV & Home Appliances</a>
+                    </li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Sports & Outdoor</a></li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Watches, Bags & Jewelery</a>
+                    </li>
+                    <li class="category-list"><a href="" class="line-hatao" target="_blank">Automative & Motorbike</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- yeh mainy anchor tag lagaya ha taky koi bg image pe click kry to koi page khuly -->
+            <a href="" class="banner-slide">
+                <a href="">
+                    <a class="banner-slider"></a>
+                </a>
+            </a>
+        </div>
+
+    </header>
+    <!-- ------------------------------------MAIN------------------------------------------------------------- -->
+
+<main class="mainn">
+
+    <!-- banner k foran nechy azadi wali pic ka kaam -->
+    <div class="parent-banner">
+
+        
+        <a href="" class="anchorr">
+            <img class="azaadi"
+            src="https://en.dailypakistan.com.pk/digital_images/extra-large/2020-08-10/tcl-and-daraz-brings-jashn-e-azadi-sale-gala-with-huge-discounts-1597055576-3562.jpg"
+            alt=""> 
+        </a>
+            
+    </div>
+
+
+    <!-- yahan pe sara main page ka kaam hai including products and ad-->
+    <div class="product-ad-voucher">
+
+<!-- dabba 1 -->
+        <iframe src="https://www.youtube.com/embed/mJO1BST8Tio" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+
+<!-- dabba 2 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/fd2b226155f2eb963b46f24a891bc947.png_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Sticky Wall Clock</p>
+            <strong>Rs.1100 </strong>
+            <del>Rs.1500</del> <ins class="line-hatao">-10%</ins>
+        </a>
+
+<!-- dabba 3 -->
+
+        <a href="" class="product  line-hatao">
+            <img src="https://static-01.daraz.pk/p/a03a5caa6a186e8b3105b769d1df01fa.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Cup Stand, Coffee cup organizer</p>
+            <strong>Rs: 420</strong>
+            <del>Rs.999</del> <ins class="line-hatao">-58%</ins>
+
+        </a>
+<!-- dabba 4 -->
+     
+        <a href="" class="product line-hatao">
+            <img src="https://static-01.daraz.pk/p/6267fea63dc4abdf0d2a469cbf8f2d44.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>TA for VIVO Y21 2021 / Y21S</p>
+            <strong>Rs. 681</strong>
+            <del>Rs.999</del> <ins class="line-hatao">-32%</ins>
+
+        </a>
+<!-- dabba 5 -->
+
+        <a href="" class="product line-hatao">
+            <img src="https://static-01.daraz.pk/p/918a25a44d11bfb985af6bdc85137d61.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Heart Wooden Clock With Premium Light</p>
+            <strong>Rs. 299</strong>
+            <del>Rs.1299</del> <ins class="line-hatao">-77%</ins>
+
+        </a>
+        <!-- dabba 6 -->
+
+        <iframe src="https://www.youtube.com/embed/mJO1BST8Tio" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+
+<!-- dabba 7 -->
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/8a48056f3e738f5f70b70a1e16844d6a.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Rooh Afza 3000ML</p>
+            <strong>Rs.885</strong>
+            <del>Rs.900</del> <ins class="line-hatao">-2%</ins>
+
+        </a>
+<!-- dabba 8 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/727f83f8408728fd3ee7f646cbfec431.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>1 Pair 3 tone Multi Olor Eye contact lens for Girls</p>
+            <strong>Rs.220</strong>
+        </a>
+<!-- dabba 9 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/21ad03df88d254f5e65b10f4cef4d0e1.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Portale 6 Blades Electric Juicer Blender mixer</p>
+            <strong>Rs.1038 </strong>
+            <del>Rs.1499</del> <ins class="line-hatao">-30%</ins>
+        </a>
+<!-- dabba 10 -->
+
+        <a class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/e469f7a15450705c264e366712acf12a.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Infinix Original 8w Charger Adopter for Infinix Note 8 </p>
+            <strong>Rs.97</strong>
+            <del>Rs.100</del> <ins class="line-hatao">-3%</ins>
+        </a>
+<!-- dabba 11 -->
+
+        <a href=""><img class="img-in-main"
+                src="data:image/png;base64,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"
+                alt=""></a>
+<!-- dabba 12 -->
+
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/87dbcd112069eb03e6f9ba1209c77943.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Refillable Mini Perfume Spray Bottle Aluminium</p>
+            <strong> Rs. 237 </strong>
+            <del>Rs.566</del> <ins class="line-hatao">-58%</ins>
+        </a>
+<!-- dabba 13 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/87dbcd112069eb03e6f9ba1209c77943.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Refillable Mini Perfume Spray Bottle Aluminium</p>
+            <strong> Rs. 237 </strong>
+            <del>Rs.566</del> <ins class="line-hatao">-58%</ins>
+        </a>
+<!-- dabba 14 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/329565521a2f97b2fcf5289058532ae6.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Hot Selling Luxury Women Phone Messenger Bag PUSH</p>
+            <strong>Rs. 743</strong>
+            <del>Rs.2200</del> <ins class="line-hatao">-66%</ins>
+
+        </a>
+<!-- dabba 15 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/41d7b81471bd2989b3290f0e951a6961.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Silicon back Scrubber for Shower, Silicon Body Bath</p>
+            <strong>Rs.179</strong>
+            <del>Rs. 500</del> <ins class="line-hatao">-64%</ins>
+
+        </a>
+<!-- dabba 16 -->
+
+
+        <a href=""><img class="img-in-main"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdc2-fO5gY7a2-BQgps1YGGIZDOWXQqMjZHw&usqp=CAU"
+                alt=""></a>
+<!-- dabba 17 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/580b321fe2c253dae59120fe3885164e.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Mehndi Stickers Mehndi Papers Mehndi Designs</p>
+            <strong>Rs. 150</strong>
+            <del>Rs. 399</del> <ins class="line-hatao">-62%</ins>
+
+
+        </a>
+<!-- dabba 18 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/348d1622e883c99506308b931a02d794.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>2Cycle Planters/ Planters With stand/ Planters Pots</p>
+            <strong>Rs. 250</strong>
+            <del>Rs.5000</del> <ins class="line-hatao">-50%</ins>
+        </a>
+<!-- dabba 19 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/29a59ecbf5db71e548f83d0b78494d10.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>4 in 1 Gift Set for Men</p>
+            <strong>Rs. 799</strong>
+            <del>Rs. 1699</del> <ins class="line-hatao">-53%</ins>
+        </a>
+<!-- dabba 20 -->
+
+        <a href="" class="product line-hatao" target="_blank">
+            <img src="https://static-01.daraz.pk/p/b6ea441611b6260bfa27186cdfc49792.jpg_400x400q75-product.jpg_.webp"
+                alt="" class="image">
+            <p>Home Office Plastic Rack / Room Organizer / shoe rack</p>
+            <strong>Rs. 399 </strong>
+            <del>Rs.599</del> <ins>-33%</ins>
+        </a>
+
+    </div>
+
+</main>
+    <!-- ------------------------------FOOTER-------------------------- -->
+
+    <footer>
+        <!-- yeh hamara pehla footer ha navy blue wala -->
+        <div class="bg-blue">
+            <div class="footer1">
+                <div class="col1">
+                    <br>
+                    <h3>Customer Care</h3><br>
+                    <a href="" class="anchor line-hatao">Help center</a>
+                    <a href="" class="anchor line-hatao">How to buy</a>
+                    <a href="" class="anchor line-hatao">Corporate & bulk purchasing</a>
+                    <a href="" class="anchor line-hatao">Returns & Refunds</a>
+                    <a href="" class="anchor line-hatao">Daraz Shop</a>
+                    <a href="" class="anchor line-hatao">Contact Us</a>
+                    <a href="" class="anchor line-hatao">Purchase Protection</a>
+                    <a href="" class="anchor line-hatao">Daraz Pickup Points</a>
+                </div>
+                <div class="col2">
+                    <br>
+                    <h3>Daraz</h3><br>
+                    <a href="" class="anchor line-hatao">About us</a>
+                    <a href="" class="anchor line-hatao">Digital Payments</a>
+                    <a href="" class="anchor line-hatao">Daraz Donates</a>
+                    <a href="" class="anchor line-hatao">Daraz Blog</a>
+                    <a href="" class="anchor line-hatao">Terms & Conditions</a>
+                    <a href="" class="anchor line-hatao">Privacy policy</a>
+                    <a href="" class="anchor line-hatao">NTN Number: 15153151</a>
+                    <a href="" class="anchor line-hatao">STRN Number: 1544531154534534</a>
+                    <a href="" class="anchor line-hatao">Online Shopping App</a>
+                    <a href="" class="anchor line-hatao">Online Grocery</a>
+                    <a href="" class="anchor line-hatao">Daraz Excluive</a>
+
+                </div>
+                <div class="col3">
+                    <br>
+                    <h2>Daraz Happy Shopping!</h2><br>
+                    <img width="100px" height="100px" border-radius="5px"
+                        src="https://laz-img-cdn.alicdn.com/images/ims-web/TB18aqePBLoK1RjSZFuXXXn0XXa.png" alt="">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- yeh hamara second foter ha grey wala -->
+        <div class="bg-grey">
+
+            <div class="footer2">
+
+                <div class=" all-col-footer2">
+                    <a href="" class="a line-hatao">
+                        <h4>How Daraz Transformed Online Shopping in Pakistan</h4>
+                        <small>Daraz first made waves in Pakistan's e-commerce market after its introduction in 2012. We
+                            have since grown to become Pakistan’s largest platform for online shopping with a network
+                            spread across Asia in Pakistan, Bangladesh, Sri Lanka, Myanmar, and Daraz.com.np. Our vision
+                            was to provide a safe, efficient online marketplace platform for vendors and customers
+                            across the country to come together. We started off exclusively as an online fashion retail
+                            platform and over the years expanded to become a complete one-stop solution for all your
+                            buying needs. Daraz prides itself on not being just another ecommerce venture in Asia. We
+                            work tirelessly to make sure that we provide users with the best online online shopping
+                            experience and value for their purchases. Whether you shop online through our website.gh our
+                            website or our online shopping mobile App, you can expect easy navigation, customized
+                            recommendations. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolor
+                            veritatis temporibus quis et magni pariatur ipsam quas quos quam! Doloremque eum velit
+                            tempora aperiam fugit reprehenderit nobis, nemo perspiciatis.</small>
+                    </a>
+                </div>
+                <div class=" all-col-footer2">
+                    <a href="" class="a line-hatao">
+                        <h4>TRENDINGS</h4>
+                        <small>Daraz does not just cater online shopping in Pakistan but also aims to simplify the way
+                            you give back to society. With charities spanning across sectors of education, health care,
+                            environmental preservation, and shelters, you can choose to make a big difference with a
+                            few, simple clicks. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam
+                            omnis laborum enim asperiores libero natus totam esse dicta illo? Aspernatur eaque tenetur,
+                            eum iste ex consequuntur beatae similique maiores. Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Voluptas expedita laborum numquam consequatur facilis enim perspiciatis,
+                            voluptatibus exercitationem dolorum quasi quis nostrum aliquid quo at doloremque iusto
+                            minima sint vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet
+                            sunt impedit, fugiat culpa obcaecati maxime nihil dicta praesentium modi sapiente nobis
+                            aspernatur est? Necessitatibus omnis ducimus hic reiciendis pariatur. Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Commodi consequatur officia assumenda ipsum, voluptatibus
+                            omnis libero natus. Numquam modi porro ipsa eligendi cumque dolores accusantium
+                            exercitationem odit, laboriosam ratione quas.</small>
+                    </a>
+                </div>
+                <div class=" all-col-footer2"><a href="" class="a line-hatao">
+                        <h4>What Makes Us Different from Other Online Shopping Platforms?</h4>
+                        <small>Select from the Largest Online Marketplace in Pakistan With over 15 million products to
+                            select from, Daraz offers its customers the most comprehensive listing of products in the
+                            country. Whether you're looking for electronics, apparel, appliances, or groceries there is
+                            something for everyone. Hassle Free Delivery:Online shopping is only as good as its
+                            execution and Daraz promises hassle free delivery right from the moment you order to when
+                            your package is dropped at your door. We cater to both major and smaller cities alike, and
+                            give you the choice to track your package as it makes its way to you so you always know your
+                            order status. If you are unsatisfied with any aspect of your order, we have a simple 7-day
+                            return or exchange policy. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                            dolore, et unde nihil debitis facilis, atque velit ipsam sint voluptatum laborum porro omnis
+                            accusantium ratione, aperiam tenetur temporibus totam deleniti. Lorem, ipsum dolor sit amet
+                            consectetur adipisicing elit. Officia aperiam voluptatem ipsa repellat fugit iure soluta
+                            sint fugiat enim minus dolores, excepturi omnis nulla ab, iusto repellendus ipsum natus
+                            quis?</small>
+                    </a>
+                </div>
+                <div class=" all-col-footer2">
+                    <a href="" class="a line-hatao">
+                        <h4>Best Vendors:</h4>
+                        <small>Shop from Verified Vendors. Daraz understands that online shopping in Pakistan comes with
+                            its fair share of risks. This is why with Daraz Marketplace and Daraz Mall customers have
+                            the security of choosing from verified vendors and brands from Karachi, Lahore, Islamabad
+                            and all across Pakistan. Now you'll never have to second guess authenticity because Daraz
+                            makes sure to do it for you! Shop Around the World with Daraz Global Collection.
+                            International sellers and local convenience come together with Daraz Global collection. Get
+                            the chance to shop online from vendors around the world without leaving the Daraz website.
+                            Featuring thousands of novelty gadgets and accessories, Daraz Global Collection offers you a
+                            selection of products that you won't find anywhere else when you're online shopping in
+                            Pakistan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolore, et unde
+                            nihil debitis facilis, atque velit ipsam sint voluptatum laborum porro omnis accusantium
+                            ratione, aperiam tenetur temporibus totam deleniti. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Officia aperiam voluptatem ipsa repellat fugit iure soluta sint fugiat
+                            enim minus dolores, excepturi omnis nulla ab, iusto repellendus ipsum natus quis?</small>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ADDITIONAL hamara chat box lagaty hain jo -->
+
+
+    <a href="" class="chat-with-us line-hatao">
+       
+       <h3 style="font-family: sans-serif;">Messages</h3>
+    </a>
+</body>
+
+</html>

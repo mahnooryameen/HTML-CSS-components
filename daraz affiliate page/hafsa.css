@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=EB+Garamond&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border box ;
+    font-size: 14%;
+}
+.menu {
+    line-height:25px ;
+    padding-bottom:20px ;
+}
+.menu {
+    background-color: rgb(179, 172, 172);
+    padding-left:330px;
+}
+ .menu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.information {
+    font-size: large;
+    font-style: italic;
+}
+.qorma {
+    background-color: rgba(235, 85, 31, 0.89);
+    color: whitesmoke;
+    
+}
+.side {
+    background-color: rgba(43, 3, 88, 0.925);
+    color: whitesmoke;
+}
+
+
+
+
+    

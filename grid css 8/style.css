@@ -1,0 +1,309 @@
+
+/* is code se 4 lines agayin with child css as we gave to the items */
+
+ .container{
+    display: grid;
+
+}
+
+.item{
+    border: 2px solid lightcoral;
+    background-color: lightsalmon;
+
+
+} 
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+/* pehly code ma hamara har div alag line mai araha tha lekin ab mai isko colum dungi and divs un column mai chaly jayengy */
+/* 200px jab di ha to 3 colum bany phir screen ki bakaya width khali rahi then next line main bi 3 column thy to bakaya div udher gaye */
+/* NOTE: grid parent ko diya yani jahan pe parent khtm ho rha hoga wahan grid bi end hojayega */
+
+
+
+ .container{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+
+}
+
+.item{
+    border: 2px solid lightcoral;
+    background-color: lightsalmon;
+
+
+} 
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* jo uper kiya ha wohi yahan kr rhi just mainy ab row wise dekhaya */
+/* 4 row = all 4 div in each row */
+/* 3 row = to 200px ki heigth le kr each row mai 3 div agaye, 4th div simple line mai agaya without 200px, patli line & within the grid bcoz its parent has diplay grid property */
+
+.container{
+    display: grid;
+    grid-template-rows: 200px 200px 200px ;
+
+}
+
+.item{
+    border: 2px solid lightcoral;
+    background-color: lightsalmon;
+
+
+} 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* yahan i am itroducing NFR fr means fraciton matlab relatively jagah banana in complete width of screen */
+/* jitny fr diye hain spaces de kr utny hi colums banengy and N means relative box's width */
+/* last wala column 2 column ki jagah le rha  */
+/* grid-gap se margin jaisy gap bana skty hum within our grid and between the boxes/child/elements, yahan hamara 10px ka gap ayega on each box at all 4 sides */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr ;
+    grid-gap: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+}
+
+.item{
+    border: 2px solid lightcoral;
+    background-color: lightsalmon;
+
+
+} 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* repeat(no of column/row, nfr ka matlab yahan relative width taking) */
+/* is code se 3 column bany ek bar 1fr se teeno column same width k,,, screen ki complete width use mai agayi because yeh gri hum div mai kr rhy and the div is block to jo main parent div ha wo to puri width lega */
+/* 3 column of relative equal length */
+
+ .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  ;
+    grid-gap: 10px;
+    
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+
+} 
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* abhi tak in boxes ka size automatic tha yani yeh implicit grid ha  */
+/* abhi agar main box ka content barha dun yani abhi dabba jitna bara ha content us se bhi ziada de dun to daba automatically bara ho jayega and ek dabba jab bara hoga to baki column k dabbo ki heigth bhi accordingly/relatively bari hojayegi */
+
+/* html mai ja kr jab mainy box1 ko lorem200 diya to yahan wala box apny size se heigth main bara hogaaya, length mai nh hua i think shayad isliye ku k 1fr diya hua yani sary box relatively equal width k rahengy */
+
+ .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+
+} 
+
+/* grid mai row matlab length and column matlab heigth */
+/* ab agar dabba automatically na barhy to isky liye hum kuch properties dety hain */
+/* grid-auto-rows: npx;  is se dabba ki heigth npx hojayegi lekin hamara content overflow hojayega  */
+/* is se sari rows ki heigth 200px hogayi with overflow of content */
+
+
+/* hum grid auto column : npx; dengy to column yani width set hojayegi dabby ki phir agar content us width se ziada hua to seedhy hath ki taraf overflow hojayega */
+
+ .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 200px;
+    grid-auto-columns: 200px;   /*  abhi iska ziada khas farq nh para ku k humny 1fr se sab boxes ko relative width di hui ha */
+     
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+
+} 
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* TRICK: minmax(min, max) in px,,, for grid-auto-row: minmax(heigth, heigth)/// row = heigth */
+/* min heigth deny ka matlab k dabba normally pehli(min) wali heigth jitna bara hoga lekin agar need hui to heigth barhegi otherwise max heigth normal rahgegi  */
+
+ .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax();
+    grid-gap: 10px;
+    
+     
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+
+} 
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* ek new chez ayi ha  */
+/* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+/* 1fr = all columns of equal width */
+/* autofill = jitny bhi columns ajayen bana do///abhi 4 div hain to 4 column ban gaye */
+/* minimun width = 200px for each column */
+/* behtareen concept ha or mujhy smj bhi agaya ha  */
+
+/* RESPONSIVENESS WALA  */
+
+  .container{
+    display: grid;
+     /* before content  */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+     /* after content row=heigth col=wid  */
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px,auto);
+
+    grid-gap: 10px;
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+
+}  
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* nestedness :) */
+
+  .container{
+    display: grid;
+     /* before content   */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+     /* after content row=heigth col=wid   */
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px,auto);
+
+    grid-gap: 10px;
+
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+
+}  
+
+/* behatreen tareeky se nesting hui ha idher maza agaya */
+.parent{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+}
+.child{
+    border: 2px solid black;
+
+} 
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+/* row and columns shifting and expanding */
+/* jab hamain merging krni hoti hain to hum chilren ko id dety hain and editing childrens pe hoti hain  */
+
+/* merging dabba 2 and 9 */
+.container{
+    display: grid;
+    /* before content   */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    /* after content row=heigth col=wid   */
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px,auto);
+    grid-gap: 10px;
+}
+
+.item{
+    border: 5px solid rgb(186, 52, 52);
+    background-color: lightsalmon;
+}  
+
+
+/* yahan yeh hua k hummny is box ko jo jagah di ha yeh box wahan pe ja kr settle hogaya jaisy k line 2 se start and line 3 per ended */
+ #two{
+    grid-row-start: 2;
+    grid-row-end: 3;
+} 
+
+/* a main is box ko abhi jahan hai wahan se ek right pe shift krna chah rhi */
+/* jab main ek box ko agy pechy krungi to yeh chez ka khyal rakhna k usky badly konsa dabba agy pechy ho rha to fill its gap sweet note */
+
+ #two{
+    grid-column-start: 2;
+    grid-column-end: 3;
+} 
+
+/* dabba agar hum expand krna chahain jaisy table main colspan and roespan krty thy to */
+/* dabba one pr kr rhi hun */
+/* this one is amazing truly */
+
+ #one{
+grid-row-start: 1;
+grid-row-end: 3;
+} 
+
+
+/* --------------------------------------------------------------------------------------------------------------------------*/
+
+/* sir ki css */
+/* allign and justify code in parent */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px,1fr));
+    grid-template-rows: repeat(1, minmax(200px,1fr));
+
+    grid-gap: 20px;
+    /* align-items: center;  */
+    /* place-items: center;  */
+    
+
+}
+
+.item{
+    border: 5px solid darkgreen;
+    background-color: lightgreen;
+    /* shorthand for end and start waly codes */
+
+    grid-column:1/span 2;
+    
+
+}
+
+
+

@@ -1,0 +1,5 @@
+justify-items: center;
+    align-items: center; */
+     place-items: center; 
+
+    grid-column:1/span 3 ;

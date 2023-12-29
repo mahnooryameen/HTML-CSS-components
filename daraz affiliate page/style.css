@@ -1,0 +1,228 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------------NAVBAR----------------------------------- */
+
+/* yahan main navbar ki pehli line ki css kr rhi */
+
+/* idher mainy nav bar ko sticky karwaya ha bg white isliye diya ku k jab nechy jaye to bg white aye navbar ka */
+.navbar {
+    
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+.navline1 {
+    background-color: rgba(158, 158, 158, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    height: 25px;
+
+    /* ma yaha flex use kr rhi hun taky content vertically & horizontally center allign ho & responsiveness asani se implement ho paye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* yahan elements k bech main distance deny liye margins diye */
+.nav-elements {
+    margin-right: 20px;
+    margin-left: 17px;
+    background-color: rgba(158, 158, 158, 0);
+    text-decoration: none;
+    color: black;
+}
+
+/* save more on app waly ko left side pe margin diya taky thora aagy khisk jaye */
+#save {
+    color: orangered;
+    margin-left: 230px;
+}
+
+/* -------------------ab main navbar ki dusri line k liye coding kr rhi----------------------------------- */
+
+
+/* puri line 2 ko di hui css */
+
+
+.navline2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 70px;
+
+    /* flex isliye gayi taky sab elements line wise ajayen plus center allign hojayen */
+    display: flex;
+    justify-content: center;
+    /*center allign for horizontal */
+    align-items: center;
+    /*center allign for vertical*/
+
+}
+
+
+/* line 2 ma jo pehla logo ha uksi css */
+.nav-logo-img {
+    width: 135px;
+    height: 41px;
+    background-color: white;
+    margin-right: 75px;
+}
+
+
+/* line 2 main search bar ki css */
+#nav-input {
+    width: 688px;
+    height: 45px;
+    background-color: #f5f5f5;
+    padding: 13px 9px;
+
+
+    /* border removal of search bar */
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+
+    border-radius: 2px;
+}
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan just border remove kiya */
+.nav-search-icon {
+    width: 40px;
+    /*yahan W and H jo di ha wohi nechy bhi di taky image button se overflolw na ho*/
+    height: 45px;
+
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan button pe lagayi hui image ka size chota kiya remove kiya */
+.nav-search-icon-img {
+    width: 40px;
+    height: 45px;
+}
+
+
+/* cart ka logo lagany k liye yahan css di */
+.nav-cart-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 35px;
+}
+
+
+/* last element of line 2  */
+.nav-download-img {
+    width: 188px;
+    height: 45px;
+
+    margin-left: 35px;
+}
+/*----------------------------------------------------------------- BANNER--------------------------------------------------------- */
+.underline-hatao{
+    text-decoration: none;
+}
+
+.banner-image{
+    width:1188px;
+    margin-left: 166px;
+    margin-right: 166px;
+}
+
+/* -----------------------------------------------------------who we are------------------------------------------------------- */
+
+.who-we-are{
+    margin-left: 166px;
+    margin-right: 166px;
+
+    padding: 20px;
+
+    font-size: large;
+    font-style: italic;
+    font-family: Verdana, sans-serif;
+
+    text-align: center;
+}
+p{
+    padding: 10px;
+}
+
+/* --------------------------------------------------------main-------------------------------------------------------------------- */
+.section5-img{
+    margin-left: 166px;
+}
+.section7-main{
+    background-color: rgba(235, 85, 31, 0.89);
+    color: whitesmoke;
+
+    margin-left: 166px;
+    margin-right: 166px;
+    
+}
+
+/* --------------------------------------------FOOTER------------------------------------------------------- */
+
+
+/* first footer */
+.bg-blue{
+    background-color: #2e2e54;
+}
+.footer1{
+margin-left: 200px;
+margin-right: 200px;
+font-family: sans-serif;
+
+color: white;
+
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 322px ;
+}
+.anchor{
+    color: white;
+    display: block;
+    padding: 2px;
+    font-family: sans-serif;
+}
+
+/* second footer */
+
+.bg-grey{
+    background-color: #f5f5f5;
+
+}
+.footer2{
+    margin-left: 200px;
+    margin-right: 200px;
+
+    
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;    /*ek row of length 500px */
+}
+
+.all-col-footer2{
+    
+    font-family: sans-serif;
+    padding: 5px;
+
+    
+}
+
+.a{
+    color: black;
+    font-size: smaller;
+}

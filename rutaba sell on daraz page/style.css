@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik+Iso&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/* ------------------------------------------NAVBAR------------------------------------------------------------------------------ */
+
+/* yahan main navbar ki pehli line ki css kr rhi */
+
+/* idher mainy nav bar ko sticky karwaya ha bg white isliye diya ku k jab nechy jaye to bg white aye navbar ka */
+.navbar {
+    
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+.navline1 {
+    background-color: rgba(158, 158, 158, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    height: 25px;
+
+    /* ma yaha flex use kr rhi hun taky content vertically & horizontally center allign ho & responsiveness asani se implement ho paye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* yahan elements k bech main distance deny liye margins diye */
+.nav-elements {
+    margin-right: 20px;
+    margin-left: 17px;
+    background-color: rgba(158, 158, 158, 0);
+    text-decoration: none;
+    color: black;
+}
+
+/* save more on app waly ko left side pe margin diya taky thora aagy khisk jaye */
+#save {
+    color: orangered;
+    margin-left: 230px;
+}
+
+/* -------------------ab main navbar ki dusri line k liye coding kr rhi----------------------------------- */
+
+
+/* puri line 2 ko di hui css */
+
+
+.navline2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 70px;
+
+    /* flex isliye gayi taky sab elements line wise ajayen plus center allign hojayen */
+    display: flex;
+    justify-content: center;
+    /*center allign for horizontal */
+    align-items: center;
+    /*center allign for vertical*/
+
+}
+
+
+/* line 2 ma jo pehla logo ha uksi css */
+.nav-logo-img {
+    width: 135px;
+    height: 41px;
+    background-color: white;
+    margin-right: 75px;
+}
+
+
+/* line 2 main search bar ki css */
+#nav-input {
+    width: 688px;
+    height: 45px;
+    background-color: #f5f5f5;
+    padding: 13px 9px;
+
+
+    /* border removal of search bar */
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+
+    border-radius: 2px;
+}
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan just border remove kiya */
+.nav-search-icon {
+    width: 40px;
+    /*yahan W and H jo di ha wohi nechy bhi di taky image button se overflolw na ho*/
+    height: 45px;
+
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan button pe lagayi hui image ka size chota kiya remove kiya */
+.nav-search-icon-img {
+    width: 40px;
+    height: 45px;
+}
+
+
+/* cart ka logo lagany k liye yahan css di */
+.nav-cart-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 35px;
+}
+
+
+/* last element of line 2  */
+.nav-download-img {
+    width: 188px;
+    height: 45px;
+
+    margin-left: 35px;
+}
+/* ------------------------------------------------------BANNER--------------------------------------------- */
+/* yeh class mainy banner main jo li main anchor tag ha usko di ha taky line hat jaye */
+.line-hatao {
+    text-decoration: none;
+}
+
+/* wo wala div jismain category and banner dono hain, iska display flex kiya taky image and category inline tareeky se ajayen*/
+.main-banner {
+    height: 344px;
+    display: flex;
+    
+}
+
+/* yeh class category waly parent div ko di ha taky margin set kiya ja sky */
+.banner-category {
+    width: 200px;
+    margin-left: 200px;
+    background-color: white;
+}
+/* yeh class li ko di hui hain taky li se pehly dots hat jayen and paading khubsurti k liye diyw */
+.category-list {
+    list-style: none;
+    padding: 6px 5px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* yeh class ha li ki hain taky jab koi unpe hover kry to changing hoon */
+.category-list:hover {
+    background-color: rgb(188, 188, 241);
+}
+
+/* category k sath jo image ha yeh class usko di ha and yahan image ka size set kiya ha */
+
+.banner-image{
+width: 920px;
+height: 344px;
+
+border: 1px solid rgb(230, 226, 226);
+}
+
+
+
+/* ------------------------------------------------------MAIN--------------------------------------------- */
+
+/* all sections ko di hui css */
+section{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* jahan jahan images pe mainy width deno thi yahan se di */
+.section-image{
+    width: 1120px;
+    height: 344px;
+}
+
+/* aside mai ad ko bech main lany k liye yeh kiya */
+aside{
+    display: flex;
+    justify-content: center;
+}
+
+/* yahan frequently ask se uper wali 3 sath images ko display flex diya taky ek hi line main ayen */
+.display-flex{
+    display: flex;
+}
+
+/* flip images ki width set */
+.margin-set{
+    margin: 5px;
+}
+
+
+/* detail waly tag ko css de rhi ider */
+details{
+    padding: 5px;
+    margin: 2px;
+    font-size: 2rem;
+    text-align: justify;  
+}
+
+details:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(224, 133, 29, 0.19);
+
+}
+
+/* ------------------------------------------------------FOOTER--------------------------------------------- */
+
+
+
+/* first footer */
+.bg-blue{
+    background-color: #2e2e54;
+}
+.footer1{
+margin-left: 200px;
+margin-right: 200px;
+font-family: sans-serif;
+
+color: white;
+
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 322px ;
+}
+.anchor{
+    color: white;
+    display: block;
+    padding: 2px;
+    font-family: sans-serif;
+}
+
+/* second footer */
+
+.bg-grey{
+    background-color: #f5f5f5;
+
+}
+.footer2{
+    margin-left: 200px;
+    margin-right: 200px;
+
+    
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;    /*ek row of length 500px */
+}
+
+.all-col-footer2{
+    
+    font-family: sans-serif;
+    padding: 5px;
+
+    
+}
+
+.a{
+    color: black;
+    font-size: smaller;
+}

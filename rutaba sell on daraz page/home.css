@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik+Iso&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* yahan main navbar ki pehli line ki css kr rhi */
+
+/* idher mainy nav bar ko sticky karwaya ha bg white isliye diya ku k jab nechy jaye to bg white aye navbar ka */
+.navbar {
+    
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+.navline1 {
+    background-color: rgba(158, 158, 158, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    height: 25px;
+
+    /* ma yaha flex use kr rhi hun taky content vertically & horizontally center allign ho & responsiveness asani se implement ho paye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* yahan elements k bech main distance deny liye margins diye */
+.nav-elements {
+    margin-right: 20px;
+    margin-left: 17px;
+    background-color: rgba(158, 158, 158, 0);
+    text-decoration: none;
+    color: black;
+}
+
+/* save more on app waly ko left side pe margin diya taky thora aagy khisk jaye */
+#save {
+    color: orangered;
+    margin-left: 230px;
+}
+
+/* -------------------ab main navbar ki dusri line k liye coding kr rhi----------------------------------- */
+
+
+/* puri line 2 ko di hui css */
+
+
+.navline2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 70px;
+
+    /* flex isliye gayi taky sab elements line wise ajayen plus center allign hojayen */
+    display: flex;
+    justify-content: center;
+    /*center allign for horizontal */
+    align-items: center;
+    /*center allign for vertical*/
+
+}
+
+
+/* line 2 ma jo pehla logo ha uksi css */
+.nav-logo-img {
+    width: 135px;
+    height: 41px;
+    background-color: white;
+    margin-right: 75px;
+}
+
+
+/* line 2 main search bar ki css */
+#nav-input {
+    width: 688px;
+    height: 45px;
+    background-color: #f5f5f5;
+    padding: 13px 9px;
+
+
+    /* border removal of search bar */
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+
+    border-radius: 2px;
+}
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan just border remove kiya */
+.nav-search-icon {
+    width: 40px;
+    /*yahan W and H jo di ha wohi nechy bhi di taky image button se overflolw na ho*/
+    height: 45px;
+
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+
+/* search bar k sath jo search button ha usko css, ismian mainy yahan button pe lagayi hui image ka size chota kiya remove kiya */
+.nav-search-icon-img {
+    width: 40px;
+    height: 45px;
+}
+
+
+/* cart ka logo lagany k liye yahan css di */
+.nav-cart-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 35px;
+}
+
+
+/* last element of line 2  */
+.nav-download-img {
+    width: 188px;
+    height: 45px;
+
+    margin-left: 35px;
+}
+
+
+/* ----------------------------------BANNER-------------------------------------------- */
+
+/* yeh class mainy banner main jo li main anchor tag ha usko di ha taky line hat jaye */
+.line-hatao {
+    text-decoration: none;
+}
+
+/* yeh class li ko di hui hain taky li se pehly dots hat jayen and paading khubsurti k liye diyw */
+.category-list {
+    list-style: none;
+    padding: 6px 5px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* yeh class ha li ki hain taky jab koi unpe hover kry to changing hoon */
+.category-list:hover {
+    background-color: rgb(188, 188, 241);
+}
+
+
+
+.main-banner {
+    height: 344px;
+    display: flex;
+    animation-name: main-banner-animation;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+@keyframes main-banner-animation {
+    0% {
+        background-color: rgb(6, 6, 108);
+    }
+
+    25% {
+        background-color: #f3d2e5;
+    }
+
+    50% {
+        background-color: rgb(80, 84, 214);
+    }
+
+    75% {
+        background-color: goldenrod;
+    }
+
+    100% {
+        background-color: lightgreen;
+    }
+}
+
+.banner-category {
+    width: 200px;
+    margin-left: 200px;
+    background-color: white;
+}
+
+.banner-slide {
+    width: 930px;
+    animation-name: banner-slide-animation;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+@keyframes banner-slide-animation {
+    0% {
+        background-image: url(https://icms-image.slatic.net/images/ims-web/06a125fc-bf77-47f6-a27e-a971c1aaec6a.jpg_1200x1200.jpg);
+        background-size: cover;
+    }
+
+    25% {
+        background-image: url(https://icms-image.slatic.net/images/ims-web/6f83444f-3113-4f4b-9b1f-f6fc3a28601c.jpg);
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url(https://icms-image.slatic.net/images/ims-web/4e6564d2-a2bd-445f-a0e5-b65bcc7c5d52.jpg);
+        background-size: cover;
+    }
+
+    75% {
+        background-image: url(https://icms-image.slatic.net/images/ims-web/c70e34d7-d359-42f6-b97e-411fe271cc90.jpg);
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url(https://icms-image.slatic.net/images/ims-web/cb3e9bdc-d333-43cb-a277-01545b685157.jpg);
+        background-size: cover;
+    }
+}
+/*  -----------------------------------------------MAIN--------------------------------- */
+
+
+/* BANNER K NECHY AZADI WALI PIC KA KAAM */
+
+.azaadi{
+    margin-left: 200px;
+    margin-right: 200px;
+    width: 1120px;
+    padding: 10px;
+}
+
+/* -------------------------------main ki jagah jahan grid ha and grid k ander products, aside ad, aad k nechy wali pic ha---- */
+
+.mainn{
+    background-color: #f5f5f5;   
+}
+
+/* yeh parent div ha jispy grid lagayi */
+.product-ad-voucher{
+    margin-left: 200px;
+    margin-right: 200px;
+
+    background-color: #f5f5f5;
+
+    display: grid;
+    grid-gap: 5px;
+
+    grid-template-columns: repeat(6, 1fr);        /* 6 column and 4 rows we have */
+    grid-template-rows: repeat(4, 1fr);
+
+}
+
+/* yt ad k liye grid se 2col and 2 row span krwayi */
+.yt-ad-aside{
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    background-color: black;
+}
+
+
+/* yahan ad k nachy wali 2 pics han */
+.pic-pk-day{
+    grid-column: 1/span 2;
+    grid-row: 3/span 4;
+    background-color: #ec5e1e;
+}
+
+.pic-pk-day-images{
+    width: 327px;
+    height: 333px;
+}
+
+/* yeh products jo arahy hain unki css ha */
+.product{
+    height: 325px;
+    background-color: white;
+    padding: 2px;
+}
+
+
+/* product pe hover krty waqt ki css */
+.product:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+
+/* har product k div ko yeh class di ha ,, image heigth set krny k liye, width jo by default mili thi woh perfect thi */
+.image{
+    height: 189px;
+}
+
+/* strong tag diya tha RS ko unpe orange color diya ku k daraz pe tha */
+strong{
+    color: orangered;
+}
+
+
+/* --------------------------------------------FOOTER------------------------------------------------------- */
+
+
+/* first footer */
+.bg-blue{
+    background-color: #2e2e54;
+}
+.footer1{
+margin-left: 200px;
+margin-right: 200px;
+font-family: sans-serif;
+
+color: white;
+
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 322px ;
+}
+.anchor{
+    color: white;
+    display: block;
+    padding: 2px;
+    font-family: sans-serif;
+}
+
+/* second footer */
+
+.bg-grey{
+    background-color: #f5f5f5;
+
+}
+.footer2{
+    margin-left: 200px;
+    margin-right: 200px;
+
+    
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;    /*ek row of length 500px */
+}
+
+.all-col-footer2{
+    
+    font-family: sans-serif;
+    padding: 5px;
+
+    
+}
+
+.a{
+    color: black;
+    font-size: smaller;
+}
+
+/* ---------------- ADDITIONAL CSS LIKE CHAT BOT------------------------------------------------- */
+
+.chat-with-us{
+    width: 130px;
+  border: 2px solid rgb(226, 223, 223);
+padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    right: 100px;
+background-color: white;
+
+
+}
+
+.chat-with-us:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
